@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: white;
+      color: #ff4d6d;
+    }
+
+    .hidden {
+      display: none;
+    }
+.photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px 0;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- EDIT NAME HERE -->
+    <h1>Hey <span contenteditable="true">My Love</span> 💕</h1>
+
+    <!-- EDIT MESSAGE HERE -->
+    <p contenteditable="true">
+      From the moment you entered my life, everything felt warmer, brighter, and happier.
+      I was wondering something special...
+    </p>
+
+    <div class="heart">❤️</div>
+<img src="photo.jpg" alt="My Valentine" class="photo">
+
+    <h2>Will you be my Valentine?</h2>
+
+    <button class="yes" onclick="sayYes()">Yes 💖</button>
+    <button class="no" onclick="sayNo()">No 🙈</button>
+
+    <p id="response" class="hidden"></p>
+  </div>
+
+  <script>
+    function sayYes() {
+      const msg = document.getElementById("response");
+      msg.classList.remove("hidden");
+      msg.innerHTML = "YAY!!! 💕 You just made me the happiest person alive 🥰";
+    }
+
+    function sayNo() {
+      alert("Nice try 😌 You don't really mean that 💖");
+    }
+  </script>
+
+</body>
+</html
